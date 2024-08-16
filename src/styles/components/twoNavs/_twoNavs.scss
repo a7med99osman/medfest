@@ -1,0 +1,91 @@
+.twoNavs  {
+    margin-bottom: 200px;
+    width: 100%;
+    @include flex (center , center , column);
+    .primary-nav{
+        margin-top: 32px;
+        display: inline-block;
+        ul {
+            li{
+                position: relative;
+            }
+            background-color: #161616;
+            padding:  16px 48px;
+            border-radius: 45px;
+            @include font  (400,20px,33px);
+            @include flex (center , center);
+            gap: 85px;
+            cursor: pointer;
+            .active  {
+                color : $orange;
+            }
+            li.active::before{
+                content: '';
+                position: absolute;
+                left: -20px; 
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background-color: $orange;
+                border-radius: 50%;
+            }
+        }
+    }
+    .secondry-nav{
+        margin-top: 80px;
+        margin-bottom: 64px;
+        ul {
+            display: flex;
+            gap: 140px;
+            li{
+                position: relative;
+                text-transform: uppercase;
+            }
+            padding:  16px 48px;
+            border-radius: 45px;
+            @include font  (500,18px,23px ,3px);
+            @include flex (center , center);
+            cursor: pointer;
+            .active  {
+                color : $orange;
+            }
+            li.active::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -12px; 
+                height: 6px; 
+                width: 98px; 
+                background-color : $orange;
+                border-radius: 12px; 
+            }
+        }
+    }
+}
+@media (max-width :1204px) {
+    .twoNavs {
+        margin-bottom: 90px;
+        .primary-nav{
+            ul{
+                @include font  (400,15px,33px);
+                gap: 45px;
+            }
+        }
+        .secondry-nav{
+            margin-bottom: 20px;
+            margin-top: 27px;
+            padding:  10px 0px !important;
+            ul{
+                gap: 30px;
+                @include font  (500,8px,23px ,0px);
+                li.active::after{
+                    height: 3px; 
+                    width: 25px; 
+                    bottom: -7px;
+                }
+            }
+        }
+    }
+}

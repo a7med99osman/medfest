@@ -1,0 +1,45 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Global Style
+@import '../src/styles/global/variables';
+@import './styles/pages/home/home';
+@import './styles/components/header/header';
+@import './styles/components/homeSwiper/homeSwiper';
+@import './styles/components/timer/timer';
+@import './styles/components/headline/headline';
+@import './styles/components/timeline/timeline';
+@import './styles/components/innerNav/innerNav';
+@import './styles/components/footerSwiper/footerSwiper';
+@import './styles/components/footer/footer';
+@import './styles/pages/mfe/mfe';
+@import './styles/components/orangeBtn/orangeBtn';
+@import './styles/components/leftHeadline/leftHeadline';
+@import './styles/components/awardsSwiper/awardsSwiper';
+@import './styles/components/twoNavs/twoNavs';
+@import './styles/components/days/films/day1Films';
+@import './styles/components/grid/actorsGrid';
+@import './styles/components/tickets/tickets';
+@import './styles/components/programs/programs.scss';
+@import './styles/components/events/events1/events1.scss';
+@import './styles/pages/previousEvents/previousEvents.scss';
+@import './styles/pages/press/press.scss';
+@import './styles/pages/about/about.scss';
+@import './styles/pages/contact/contact.scss';
+*{
+  padding : 0 ;
+  margin : 0 ;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  color : #F4F4F4
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}

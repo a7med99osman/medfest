@@ -1,0 +1,164 @@
+.contactPage {
+    @include flex (center , center ,column);
+    margin-bottom: 500px;
+    .banner {
+        position: relative;
+        padding-top: 326px;
+        padding-left: 0px;
+        height: 488px;
+        .bannerContent{
+            .words{
+                h2{
+                    text-transform: uppercase;
+                    $color : $white;
+                    @include font(700,92px,90px,1.5px);
+                    span{
+                        color : $orange;
+                    }
+                }
+            }
+            p{
+                width: 38%;
+                color: #B9B9B9;
+                margin-top: 20px;
+                @include font(500,20px,38px,1px);
+            }
+        }
+        .form-box {
+            width: 100%;
+            padding-inline: 80px;
+            margin-top: 114px;
+            @include flex (center , flex-start);
+            .formContent {
+                h3 {
+                    text-transform: uppercase;
+                    @include font(700,31px,41.6px,1px);
+                }
+                p{
+                    margin-top: 10px;
+                    color: #B9B9B9;
+                    @include font(500,20px,38px,1px);
+                }
+            }
+            .formDiv{
+                position: absolute;
+                top: 326px ;
+                right: 0px;
+                background-color: #F4F4F4;
+                padding: 32px;
+                border-radius: 10px;
+                form {
+                    color: #F4F4F4 !important;
+                    width: 518px;
+                    @include flex (center , center , column);
+                    gap: 24px;
+                    input {
+                        padding-left: 32px;
+                        border: none;
+                        width: 100%;
+                        height: 61px;
+                        background-color: #EEEEEE;
+                        border-radius: 50px;
+                    }
+                    button {
+                        align-self: flex-end;
+                        margin-top: 16px;
+                        border-radius: 40px;
+                        .innerDiv {
+                            gap: 24px;
+                            padding-inline: 32px 11px ;
+                            padding-block: 11px 11px ;
+                            @include flex (center,center);
+                            h3{
+                                @include font(500,18px,23px,0px);
+                            }
+                            .arrow{
+                                width: 34px;
+                                height: 34px;
+                                img{    
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width : 1204px) {
+    .contactPage {
+        margin-bottom: 120px;
+        .banner {
+            padding-top: 700px;
+            padding-left: 30px;
+            @include flex (center , flex-end ,column);
+            height: 567px;
+            .bannerContent {
+                .words {
+                    h2{
+                        @include font(700,40px,42.6px,1.5px);
+                    }
+                }
+                p{
+                    width: 55%;
+                    @include font(500,8px,15px,1px);
+                }
+            }
+            .form-box {
+                width: 84%;
+                padding-inline: 32px !important;
+                margin-top: 20px !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                .formContent {
+                    h3 {
+                        width: 100%;
+                        @include font(700 !important,18px !important,23.4px !important,0px) ;
+                    }
+                    p{
+                        width: 100%;
+                        margin-top: 10px;
+                        color: #B9B9B9;
+                        @include font(400 !important,14px  !important,20px !important,1px);
+                    }
+                }
+                .formDiv{
+                    margin-top: 30px;
+                    position :unset;
+                    width: 221px;
+                    form {
+                        @include flex (center , center , column);
+                        gap: 16px !important;
+                        input {
+                            @include font(500 !important,6px !important,7.5px !important,0px);
+                            padding-left: 15px;
+                            height: 23px;
+                        }
+                        button {
+                            margin-top: 8px;
+                            .innerDiv {
+                                gap: 10px !important;
+                                padding-inline: 10px 3px !important;
+                                padding-block: 4px 4px  !important;
+                                h3{
+                                    @include font(500 !important,6px !important,7.5px !important,0px);
+                                }
+                                .arrow{
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    
+}

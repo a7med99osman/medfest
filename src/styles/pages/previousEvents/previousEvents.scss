@@ -1,0 +1,143 @@
+.previousEventsPage{
+    width: 100%;
+    @include flex (center , center , column);
+    .banner {
+        padding-top: 221px;
+        padding-left: 81px;
+        height: 408px;
+        .bannerContent{
+            .words{
+                h2{
+                    text-transform: uppercase;
+                    $color : $white;
+                    @include font(700,92px,90px,1.5px);
+                    span{
+                        color : $orange;
+                    }
+                }
+            }
+            p{
+                width: 66%;
+                color: #B9B9B9;
+                margin-top: 20px;
+                @include font(500,20px,38px,1px);
+            }
+        }
+    }
+    .ourEvents-box{
+        width: 100%;
+        .headline-Rline{
+            @include flex (center , center , column);
+            margin-top: 140px;
+            width: 100%;
+            .h-line {
+                background-color: #90231E;
+                height: 1px;
+                width: 10%;
+            }
+            h3{
+                text-transform: uppercase;
+                margin-top: 20px;
+                @include font (700,32px,unset,2px) ;
+            }
+            p{
+                margin-top: 20px;
+                color: #B9B9B9;
+                @include font (500,20px,unset,.5px) ;
+            }
+        }
+    }
+    .eventsGrid{
+        margin-top: 88px;
+        padding-inline: 80.5px;
+        @include flex (center, center);
+        flex-wrap : wrap ;
+        gap: 24px;
+        .singleEvent {
+            cursor: pointer;
+            border-radius: 10px;
+            gap: 32px;
+            padding: 32px;
+            width: calc(100%/3 - 24px);
+            height: 201px;
+            @include flex (flex-end , flex-end ,column);
+            background-color: #111111;
+            .arrow {
+                width: 40px;
+                height: 20px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            h3{
+                color: #F4F4F4;
+                text-transform: uppercase;
+                @include font(400,32px,31px,1px);
+            }
+        }
+    }
+}
+@media (max-width : 1204px) {
+    .previousEventsPage {
+        .banner {
+            padding-top: 228px;
+            padding-left: 40px;
+            height: 408px;
+            .bannerContent {
+                .words {
+                    h2{
+                        @include font(700,40px,42.6px,1.5px);
+                    }
+                }
+                p{
+                    width: 90%;
+                    @include font(500,8px,15px,1px);
+                }
+            }
+        }
+        .ourEvents-box{
+            .headline-Rline{
+                @include flex (center , center , column);
+                margin-top: 10px !important;
+                width: 100%;
+                .h-line {
+                    background-color: #90231E;
+                    height: 1px;
+                    width: 10%;
+                }
+                h3{
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    @include font (700,18px,unset,2px) ;
+                }
+                p{
+                    width: 60%;
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #B9B9B9;
+                    @include font (500,10px,unset,.5px) ;
+                }
+            }
+        }
+        .eventsGrid{
+            margin-top: 36px;
+            padding-inline: 13px;
+            gap: 5px;
+            .singleEvent {
+                gap: 20px !important;
+                padding: 9px;
+                width: calc(100%/3 - 5px);
+                height: 71px;
+                .arrow {
+                    width: 10px;
+                    height: 5px;
+                }
+                h3{
+                    @include font(400,6px,7.2px,1px);
+                }
+            }
+        }
+    }
+    
+}

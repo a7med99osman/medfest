@@ -1,0 +1,120 @@
+// html {
+//     overflow-x :hidden !important;
+// }
+.timeline-container {
+    overflow-x :hidden !important;
+    margin-bottom: 120px;
+    .v-lines{
+        position: absolute;
+        top: 40px;
+        display: flex;
+        .v-line {
+            background-color: rgba(255, 255, 255, 0.66);
+            width: 1px ;
+            height: 42px;
+            padding: 0;
+            margin-right: 16px;
+        }
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    }
+    
+    .timeline {
+        width: 20%;
+        .slick-track {
+        display: flex;
+        align-items: center;
+        }
+        .bigDiv{
+            display: flex !important;
+            flex-direction: column-reverse !important;
+        }
+    }
+    
+    .year-marker {
+        .v-line-year{
+            background-color: white;
+            width: 2px ;
+            height: 64px;
+            padding: 0;
+            margin: 8px;
+        }
+    display: flex !important;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+        span {
+        display: block;
+        font-size: 14px;
+        color: #666;
+        }
+        &.selected {
+        color: $orange;
+        padding: 0 !important;
+        margin: 0 !important;
+        span {
+            color: $orange;
+        }
+        .v-line-year{
+            width: 6px ;
+            height: 84px;
+            border-radius: 10px !important;
+        }
+        }
+    }
+    
+    .event {
+    margin-top: 30px;
+    color: #fff;
+    
+        .event-date {
+        font-size: 16px;
+        color: #FFD700;
+        margin-bottom: 10px;
+        }
+    
+        .event-content {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    
+  /* Add custom styles for slick-slider to remove default arrows and dots */
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+    
+    .slick-slide {
+        outline: none;
+    }
+    
+    .slick-slide div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media (max-width: 1204px) {
+        html {
+            overflow-x: hidden !important;
+        }
+        .timeline-container {
+            margin-bottom: 64px !important;
+        }
+    }

@@ -1,0 +1,17 @@
+$orange : #EDA703;
+$white :  #F4F4F4;
+$black :  #000000;
+$gray :  #3E3E3E;
+
+@mixin font($fw , $fs ,$lh, $l : unset){
+    font-weight: $fw ;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $l;
+}
+@mixin flex($jc:center,$ai:center,$fd:row){
+    display: flex;
+    justify-content: $jc ;
+    align-items: $ai;
+    flex-direction:$fd ;
+}

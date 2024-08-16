@@ -1,0 +1,39 @@
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    h3 {
+        span {
+            color: $orange;
+        }
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 31.2px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 92px;
+        line-height: 54.5px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        padding-bottom: 40px !important;
+    }
+}
+@media (max-width : 1204px) {
+    .headline{
+        gap: 18px;
+        h3 {
+            font-size: 16px !important;
+        }
+        h2{
+            text-align: center;
+            font-size: 40px !important;
+            padding-bottom: 45px !important;
+        }
+    }
+}

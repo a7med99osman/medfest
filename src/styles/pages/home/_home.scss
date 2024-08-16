@@ -1,0 +1,117 @@
+.homeheadline{
+    margin-top: 100px;
+    margin-bottom: 66px;
+}
+.comingSoon {
+    border: solid 1px rgba(76, 76, 76, 0.356);
+    border-radius: 10px;
+    margin-top: 60px;
+    padding-left: 53px;
+    padding-block: 87px;
+    position: relative;
+    background-size: 'cover';
+    background-position: 'center';
+    background-repeat: 'no-repeat';
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%);
+    width: 1206px;
+    height: 618px;
+    h3{
+        margin-top: 90px !important;
+        color: $white;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 33px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    h2{
+        color: $white;
+        font-weight: 500;
+        font-size: 51px;
+        line-height: 72px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+}
+.numbers {
+    width: 100%;
+    height: 574px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.timelineDiv {
+    width: 70% !important;
+}
+.banner{
+    width: 100% !important;
+    height: 145px;
+    position: relative;
+    margin-bottom: 68px !important;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
+    }
+    
+}
+.social{
+    z-index: 4;
+    position: fixed;
+    top: 50vh;
+    left: 20px;
+    background-color: #1919197f;
+    border-radius: 28px;
+    @include flex (center ,center ,column);
+    gap: 32px;
+    padding: 20px 12px;
+}
+@media (max-width :1204px) {
+    .homeheadline{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .comingSoon {
+        padding-inline: 29px;
+        width: 100%;
+        height: 100%;
+        
+        h3{
+            margin-top: 120px !important;
+            font-size: 12px !important;
+        }
+        h2{
+            margin-top: 20px;
+            line-height: 50px !important;
+            font-size: 25px !important;
+        }
+    }
+    .numbers {
+        width: 100%;
+        height: 259px !important;
+        img {
+            object-fit: cover;
+        }
+    }
+    .timelineDiv {
+        width: 98% !important;
+    }
+    .banner {
+        width: 100% !important ;
+        height: 44px;
+        img {
+            object-fit: cover;
+        }
+    }
+}

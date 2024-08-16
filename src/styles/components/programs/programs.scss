@@ -1,0 +1,74 @@
+.programsPage{
+    width: 100%;
+    @include flex (center , center , column);
+    .banner {
+        padding-top: 221px;
+        padding-left: 81px;
+        height: 408px;
+        .bannerContent{
+            .words{
+                h2{
+                    text-transform: uppercase;
+                    $color : $white;
+                    @include font(700,92px,90px,1.5px);
+                    span{
+                        color : $orange;
+                    }
+                }
+            }
+            p{
+                width: 66%;
+                color: #B9B9B9;
+                margin-top: 20px;
+                @include font(500,20px,38px,1px);
+            }
+        }
+    }
+    .nav {
+        @include flex (center , center);
+        margin-top: 131px;
+        ul{
+            @include flex (center , center );
+            gap: 32px;
+            cursor: pointer;
+            li {
+                text-transform: uppercase;
+                @include font(400,24px,23px,1px);
+            }
+            .active {
+                color: #90231E;
+            }
+        }
+    }
+}
+
+@media (max-width : 1204px) {
+    .programsPage {
+        .banner {
+            padding-top: 228px;
+            padding-left: 40px;
+            height: 408px;
+            .bannerContent {
+                .words {
+                    h2{
+                        @include font(700,40px,42.6px,1.5px);
+                    }
+                }
+                p{
+                    width: 90%;
+                    @include font(500,8px,15px,1px);
+                }
+            }
+        }
+        .nav {
+            margin-top: 90px;
+            ul{
+                gap: 15px;
+                li {
+                    align-items: center;
+                    @include font(400,9px,23px,0px);
+                }
+            }
+        }
+    }
+}

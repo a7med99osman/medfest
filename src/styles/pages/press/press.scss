@@ -1,0 +1,213 @@
+.pressPage {
+    width: 100%;
+    @include flex (center , center , column);
+    .banner {
+        padding-top: 221px;
+        padding-left: 81px;
+        height: 408px;
+        .bannerContent{
+            .words{
+                h2{
+                    text-transform: uppercase;
+                    $color : $white;
+                    @include font(700,92px,90px,1.5px);
+                    span{
+                        color : $orange;
+                    }
+                }
+            }
+            p{
+                width: 66%;
+                color: #B9B9B9;
+                margin-top: 20px;
+                @include font(500,20px,38px,1px);
+            }
+        }
+    }
+    .form-box {
+        width: 100%;
+        padding-inline: 80px;
+        margin-top: 114px;
+        @include flex (center , flex-start);
+        .formContent {
+            h3 {
+                text-transform: uppercase;
+                @include font(700,31px,41.6px,1px);
+            }
+            p{
+                margin-top: 10px;
+                color: #B9B9B9;
+                @include font(500,20px,38px,1px);
+            }
+        }
+        .formDiv{
+            margin-top: 41px !important;
+            background-color: #F4F4F4;
+            padding: 32px;
+            border-radius: 10px;
+            form {
+                color: #F4F4F4 !important;
+                width: 518px;
+                @include flex (center , center , column);
+                gap: 24px;
+                input {
+                    padding-left: 32px;
+                    border: none;
+                    width: 100%;
+                    height: 48px;
+                    background-color: #EEEEEE;
+                    border-radius: 50px;
+                }
+                button {
+                    align-self: flex-end;
+                    margin-top: 16px;
+                    border-radius: 40px;
+                    .innerDiv {
+                        gap: 24px;
+                        padding-inline: 32px 11px ;
+                        padding-block: 11px 11px ;
+                        @include flex (center,center);
+                        h3{
+                            @include font(500,18px,23px,0px);
+                        }
+                        .arrow{
+                            width: 34px;
+                            height: 34px;
+                            img{    
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pressHeadline{
+        margin-top: 60px;
+        padding-inline: 80px;
+        width: 100%;
+        h3{
+            text-transform: uppercase;
+            text-align: start;
+            @include font (700,32px,41.8px,3px)
+        }
+    }
+    .pressReleases{
+        margin-top: 48px;
+        padding-inline: 80px;
+        @include flex (flex-start , center);
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 68px;
+        .pressCard{
+            
+            width: calc(100%/3 - 24px);
+            @include flex (center , center , column);
+            .image {
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height  : 100%
+                }
+            }
+            h5 {
+                width: 100%;
+                color : #B9B9B9;
+                @include font (400,14px,20px,2px)
+            }
+            h2{
+                @include font (700,16px,28.8px,2px)
+            }
+        }
+    }
+}
+@media (max-width : 1204px) {
+    .pressPage {
+        .banner {
+            padding-top: 228px;
+            padding-left: 32px;
+            height: 408px;
+            .bannerContent {
+                .words {
+                    h2{
+                        @include font(700,40px,42.6px,1.5px);
+                    }
+                }
+                p{
+                    width: 90%;
+                    @include font(500,8px,15px,1px);
+                }
+            }
+        }
+    }
+    .form-box {
+        width: 84%;
+        padding-inline: 32px !important;
+        margin-top: 20px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        .formContent {
+            h3 {
+                width: 100%;
+                @include font(700 !important,18px !important,23.4px !important,0px) ;
+            }
+            p{
+                width: 100%;
+                margin-top: 10px;
+                color: #B9B9B9;
+                @include font(400 !important,14px  !important,20px !important,1px);
+            }
+        }
+        .formDiv{
+            width: 100% !important;
+            padding: 16px !important;
+            form {
+                width: 100% !important;
+                @include flex (center , center , column);
+                gap: 16px !important;
+                input {
+                    padding-left: 24px;
+                    height: 61px;
+                }
+                button {
+                    margin-top: 8px;
+                    .innerDiv {
+                        padding-inline: 20px 13px !important;
+                        padding-block: 9px 9px  !important;
+                        h3{
+                            @include font(500 !important,14px !important,18px !important,0px);
+                        }
+                        .arrow{
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pressHeadline{
+        margin-top: 68px !important;
+        padding-inline: 32px !important;
+        h3{
+            @include font (700 !important,18px !important,23.8px !important,1.5px !important)
+        }
+    }
+    .pressReleases{
+        @include flex (center !important , center);
+        margin-top: 32px !important;
+        padding-inline: 32px !important;
+        gap: 32px !important;
+        .pressCard{
+            width: calc(100%/1) !important;
+            h5 {
+                @include font (400 !important,12px !important,20.8px !important,2px !important)
+            }
+            h2{
+                @include font (700 !important,14px !important,25px !important,2px !important)
+            }
+        }
+    }
+}

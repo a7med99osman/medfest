@@ -1,0 +1,286 @@
+    .mfePage{
+        @include flex (center , center ,column);
+        .mfeFestival{
+            position: relative;
+            .image{
+                width: 1205px ;
+                height: 611px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .overlay{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .festivalContent{
+                position: absolute;
+                top: 90px;
+                left: 0;
+                .words{
+                    display: inline-block;
+                    h2{
+                        text-transform: uppercase;
+                        $color : $white;
+                        @include font(700,92px,82px,.6px);
+                        span{
+                            color : $orange;
+                        }
+                    }
+                    h4{
+                        text-align: end;
+                        margin-right: 22px;
+                        sup{
+                            font-size: 16px;
+                        }
+                        @include font(700,24px,30px);
+                    }
+                }
+                p{
+                    width: 60%;
+                    color: #B9B9B9;
+                    margin-top: 20px;
+                    @include font(400,20px,38px,1px);
+                }
+            }
+            .date{
+                margin-top: 30px;
+                @include flex(flex-start);
+                gap: 32px;
+                .v-line{
+                    background-color: $white;
+                    height: 44px;
+                    width: 1px;
+                }
+                h2{
+                    sup{
+                        font-size: 16px
+                    }
+                    @include font(700,32px,40px);
+                }
+            }
+            .get{
+                margin-top: 40px;
+                background-color: transparent;
+                border-style: none;
+                cursor: pointer;
+                .innerDiv{
+                    padding: 14px 12px 14px 32px ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    border-radius: 40px;
+                    background-color: $orange;
+                    h5{
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 26.1px;
+                    }
+                }
+            }
+        }
+        .submitFilm {
+            margin-top: 71px;
+            padding-top: 110px;
+            padding-bottom: 78px;
+            width: 100%;
+            @include flex(center , center , column);
+            p{
+                margin-top: 8px;
+                text-align: center;
+                @include font (400,18px,25px);
+                width: 57%;
+            }
+            .orangeBtn{
+                margin-top: 32px !important;
+                .innerDiv {
+                    padding: 16px 15px 12px 40px ;
+                }
+            }
+        }
+        .trailer{
+            margin-top: 90px;
+            width: 1206px ;
+            .image{
+                margin-top: 32px;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+        .awards {
+            margin-top: 140px;
+        }
+        .program{
+            @include flex (center ,center ,column);
+            margin-top: 90px;
+            .download{
+                background-color: transparent;
+                border-style: none;
+                cursor: pointer;
+                .innerDiv{
+                    margin-top: 70px;
+                    direction: rtl;
+                    padding: 8px 12px 6px 18px ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+                    border-radius: 40px;
+                    background-color: transparent;
+                    h5{
+                        color: $white;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 18.27px;
+                    }
+                }
+            }
+        }
+        .filmAwards{
+            .headline {
+                margin-top: 140px !important;
+            }
+            .imgsContainer{
+                margin-top: 80px;
+                @include flex (center , center);
+                gap: 24px;
+                .image {
+                    width: 385px;
+                    height: 182px;
+                    img {
+                        width: 100%;
+                        height:  100%;
+                    }
+                }
+            }
+        }
+        .tickets{
+            .headline {
+                margin-top: 140px !important;
+            }
+        }
+    }
+    @media (max-width : 1204px) {
+        .mfePage {
+            .mfeFestival{
+                .image {
+                    width: 100%;
+                    height : 468px;
+                    img{
+                        object-position: left;
+                    }
+                    .overlay{
+                        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+                    }
+                }
+                .festivalContent{
+                    top: 193px;
+                    left: 19px;
+                    .words {
+                        h2 {
+                            @include font(700,50px,43px,.6px);
+                        }
+                        h4 {
+                            sup{
+                                font-size: 8px;
+                            }
+                            @include font(700,12px,15px);
+                        }
+                    }
+                    p{
+                        @include font(400,8px,14px,1px);
+                        width: 75%;
+                    }
+                }
+                .date {
+                    margin-top: 20px;
+                    gap: 15px;
+                    h2{
+                        sup{
+                            font-size: 7.5px;
+                            margin-left: 3px
+                        }
+                        @include font(700,15px,18.7px);
+                    }
+                }
+                .get {
+                    margin-top: 30px;
+                    .innerDiv {
+                        padding: 9px 15.5px 7px 15.5px ;
+                        gap: 13px;
+                        h5{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20.8px;
+                        }
+                    }
+                }
+            }
+            .submitFilm {
+                margin-top: 42px;
+                padding-top: 51px;
+                padding-bottom: 0px;
+                p{
+                    margin-top: 0px;
+                    @include font (400,8px,14px);
+                    width: 77%;
+                }
+                .orangeBtn{
+                    margin-top: 20px !important;
+                    .innerDiv {
+                        gap: 6px !important;
+                        padding: 3px 7px 0px 20px ;
+                        h5{
+                            @include font (500,10px,13px);
+                        }
+                    }
+                }
+            }
+            .trailer{
+                margin-top: 90px;
+                width: 100% ;
+                padding-inline: 17px;
+                .image{
+                    margin-top: 35px;
+                }
+            }
+            .awards {
+                margin-top: 57px;
+            }
+            .program{
+            }
+            .filmAwards {
+                .headline {
+                    margin-top: 62px !important;
+                }
+                .imgsContainer {
+                    margin-top: 24px;
+                    gap: 3px;
+                    .image{
+                        width: 118px ;
+                        height: 60px ;
+                    }
+                }
+            }
+            .tickets{
+                .headline {
+                    margin-top: 62px !important;
+                    h2{
+                    }
+                }
+            }
+        }
+    }

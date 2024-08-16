@@ -1,0 +1,113 @@
+.events-box {
+    padding-inline: 91.5px;
+    margin-top: 130px;
+    @include flex (center , center, column);
+    gap: 113px;
+
+    .eventCard{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .eventContent{
+            width: 36%;
+            @include flex (center , flex-start , column);
+            h4 {
+                @include font (400 ,20px,23.4px,2px);
+                color : $orange ;
+            }
+            h2{
+                @include font (700 ,32px,64px,3px);
+            }
+            p{
+                @include font (500 ,18px,34px,1.5px);
+                color: #B9B9B9;
+            }
+            .btn {
+                margin-top: 41px;
+                .orangeBtn {
+                    .innerDiv {
+                        border: 1px solid $white;
+                        background-color: transparent;
+                        padding: 11.5px 16px 11.5px 32px;
+                        h5{
+                            color: $white;
+                            @include font (500 ,18px,24px);
+                        }
+                    }
+                }
+            }
+        }
+        .img {
+            padding-top: 40px;
+            width: 660px ;
+            height: 374px ;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .right {
+        direction: rtl;
+        gap: 32px;
+        .eventContent {
+            .btn {
+                .orangeBtn {
+                    .innerDiv {
+                        direction: ltr;
+                    }
+                }
+            }
+            align-items: flex-end;
+            p,h4,h2{
+                text-align: end;
+            }
+        }
+    }
+}
+
+@media (max-width :1204px) {
+    .events-box{
+        .right{
+            gap: 12px;
+        }
+        padding-inline: 13px;
+        margin-top: 40px;
+        gap: 35px;
+        .eventCard{
+            .eventContent{
+                width: 40%;
+                h4 {
+                    @include font (400 ,6px,23.4px,.5px);
+                }
+                h2{
+                    @include font (700 ,10px,20px,2px);
+                }
+                p{
+                    margin-top: 7px;
+                    @include font (500 ,6px,10px,1.5px);
+                }
+                .btn {
+                    margin-top: 21px;
+                    .orangeBtn{
+                        .innerDiv{
+                            gap: 8px;
+                            padding-block: 3px 0px;
+                            padding-inline: 10px 4px;
+                            h5{
+                                @include font (500 ,6px,7px) ;
+                            }
+                        }
+                    }
+                }
+            }
+            .img {
+                padding-top: 16px;
+                width: 198px ;
+                height: 112px ;
+                
+            }
+        }
+    }
+}

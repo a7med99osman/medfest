@@ -1,0 +1,56 @@
+.timerContainer {
+    h1{
+        margin-bottom: 63px;
+        span {
+            color : $orange;
+        }
+        font-weight: 700;
+        font-size: 25px !important;
+        line-height: 33px;
+        letter-spacing: 5px;
+    }
+    .timer {
+        width: 100% !important;
+        div{
+            h2 {
+                background: linear-gradient(to top, #3F3F3F 0%, #FFFFFF 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 75.4px;
+                margin-inline: 47px;
+            }
+            p {
+                background: linear-gradient(to top, #3F3F3F 0%, #FFFFFF 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                font-size: 15px !important;
+                line-height: 19px;
+            }
+        }
+        .bar {
+            width: 90% !important;
+        }
+    }
+}
+@media (max-width : 1204px) {
+    .timerContainer {
+        h1{
+            margin-bottom: 50px;
+            font-size: 18px !important;
+        }
+        .timer {
+            div {
+                h2 {
+                    margin-inline: 0px;
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }
+}

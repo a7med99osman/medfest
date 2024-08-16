@@ -1,0 +1,188 @@
+.header{
+    
+    width: 1204px;
+    padding-top: 48px;
+    .upperFrame{
+        border-radius: 10px;
+        background-color: $white;
+        padding-block: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 71px;
+        .logo{
+            width: 195.06px;
+            height: 44.91px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .dateDiv{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: $gray;
+            .date1,.date2,.date3{
+                color: $gray;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                letter-spacing: 6%;
+                sup{
+                    font-size: 12px;
+                    padding-left: 3px;
+                }
+            }
+            .date2,.date3{
+                font-size: 18px;
+                line-height: 22.5px;
+                
+            }
+        }
+        .btns{
+            .get,.download{
+                border-style: none;
+                cursor: pointer;
+                .innerDiv{
+                    padding: 8px 12px 6px 18px ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    border-radius: 40px;
+                    background-color: $orange;
+                    h5{
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 18.27px;
+                    }
+                }
+            }
+            .download{
+                margin-left: 16px;
+                .innerDiv{
+                    background-color: transparent;
+                    border : solid 1px black;
+                }
+            }
+        }
+    }
+    // ========== NAV ========== //
+    .navBar {
+        padding-block: 32px;
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            ul {
+                display: flex;
+                gap: 48px;
+                .active {
+                    color: $orange;
+                }
+                a{
+                    text-decoration: none;
+                    color : $white;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                }   
+            }
+        }
+    }
+    .mobileMenu{
+        background-color: rgb(41, 41, 41);
+        width: 100% ;
+        position: absolute;
+        right: 0;
+        top: 120px;
+        transform: translateY(-180%);
+        z-index: 10;
+        transition: .4s;
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            a{
+                color: $white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 20px;
+                padding: 30px 20px;
+                width: 100%;
+                border-bottom: 1px solid rgb(54, 53, 52);
+            }
+        }
+    }
+}
+
+@media (max-width : 1204px) {
+    .header {
+        width: 100%;
+        padding-top: 0;
+        .upperFrame{
+            border-radius: 0px;
+            gap: 26px;
+            padding-block: 15.5px;
+            .dateDiv{
+                gap: 10px;
+                .date1,.date2,.date3{
+                    font-size: 8px;
+                    line-height: 10px;
+                    sup{
+                        font-size: 5px;
+                        padding-left: 1px;
+                    }
+                }
+            }
+            .btns{
+                .get,.download{
+                    border-style: none;
+                    cursor: pointer;
+                    .innerDiv{
+                        // display: flex;
+                        gap: 5px;
+                        padding-inline: 10px 5px;
+                        padding-block: 4px 0px;
+                        img{
+                            width: 16px;
+                            height: 16px;
+                        }
+                        h5{
+                            padding-bottom: 3px;
+                            font-size: 6px;
+                            line-height: 7.8px;
+                        }
+                    }
+                }
+                .download{
+                    margin-left: 8px;
+                    .innerDiv{
+                        background-color: transparent;
+                        border : solid 1px black;
+                    }
+                }
+            }
+        }
+        .navBar {
+            padding-block: 22px;
+            padding-inline: 33px 39px;
+            .nav {
+                .mobileNav {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .logo{
+                        width: 88px;
+                        height: 22.6px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

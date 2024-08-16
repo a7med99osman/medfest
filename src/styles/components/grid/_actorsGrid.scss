@@ -1,0 +1,150 @@
+.actorsGrid{
+    margin-top: 100px;
+    width: 100%;
+    @include flex (center , center , column);
+    .headline{
+        width: 100%;
+        .h-line {
+            background-color: #90231E;
+            height: 1px;
+            width: 10%;
+        }
+        h3{
+            margin-top: 16px;
+            @include font (700,24px,1px,2px)
+        }
+    }
+    .cardsContainer{
+        margin-top: 48px;
+        width: 1205px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+        .actorCard {
+            overflow-y: hidden;
+            &:hover .descripe {
+                transform: translateY(0%);
+            }
+            &:hover .image .overlay {
+                opacity: 0;
+            }
+            &:hover .image .overlay2 {
+                opacity: 1;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 50%);
+            }
+            position: relative;
+            .image {
+                width: 391px ;
+                height: 327px ;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, rgba(0, 0, 0, .9) 20%, rgba(0, 0, 0, 0) 70%);
+                    opacity: 1;
+                    transition: opacity .6s ease;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .overlay2 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, rgba(0, 0, 0, .7) 20%, rgba(0, 0, 0, 0) 50%);
+                    opacity: 0;
+                    transition: opacity .6s ease;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .descripe{
+                transform: translateY(75%);
+                transition: 1s;
+                position: absolute;
+                bottom: 25px;
+                left: 25px;
+                h2{
+                    text-transform: uppercase;
+                    @include font (500,18px,20px,2.5px);
+                    color: $orange;
+                }
+                h4{
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    @include font (700,24px,25px,2.5px);
+                    span {
+                        @include font (400,20px,20px,2.5px);
+                    }
+                }
+                p{
+                    margin-top: 50px;
+                    @include font (100,10px,15px,2.5px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 1204px) {
+    .actorsGrid{
+        margin-top: 40px;
+        .headline{
+            .h-line{
+                width: 20%;
+            }
+            h3{           
+                margin-top: 10px;
+                @include font (700,12px,1px,2px) 
+            }
+        }
+        .cardsContainer{
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 7px;
+            .actorCard{
+                .image{
+                    width: 103px ;
+                    height: 86px ;
+                }
+                &:hover .descripe {
+                    transform: translateY(75%);
+                }
+                &:hover .image .overlay2 {
+                    opacity: 0;
+                }
+                &:hover .image .overlay {
+                    opacity: 1;
+                }
+                .descripe {
+                    left: 8px;
+                    h2{
+                        @include font (500,6px,20px,0px);
+                    }
+                    h4{
+                        margin-top: 0px;
+                        @include font (700,6px,5px,2px);
+                        span{
+                            @include font (400,6px,0px,2.5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

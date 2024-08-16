@@ -1,0 +1,18 @@
+.leftHeadline{
+    display: flex;
+    justify-content: start;
+    h3{
+        span{
+            color : $orange ;
+        }
+        text-transform: uppercase;
+        @include font (700,92px,90px,2px)
+    }
+}
+@media (max-width : 1204px) {
+    .leftHeadline{
+        h3{
+            @include font (700,50px,60.6px,2px)
+        }
+    }
+}
