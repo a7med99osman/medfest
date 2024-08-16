@@ -1,3 +1,3 @@
-# React + Vite
+Developed a responsive and user-friendly front-end interface for a theater and movie ticket booking website. Utilized React to create an intuitive layout that allows users to easily browse and select tickets for various shows and movies. Integrated real-time seat selection and booking features, ensuring a seamless user experience across different devices. Collaborated with back-end developers to connect the UI with APIs, enabling secure payment processing and booking confirmation. The project demonstrated strong skills in front-end development, design, and user experience optimization
 
 LIVE DEMO https://medfest.netlify.app/
